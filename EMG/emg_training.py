@@ -19,9 +19,9 @@ def detrend(signal):
     return detrended
 
 
-data = pd.read_csv("../EMG_Training_E.csv")
-data2 = pd.read_csv("../EMG_Training_H.csv")
-data3 = pd.read_csv("../EMG_Training_S.csv")
+data = pd.read_csv("../Datasets/EMG_Training_E.csv")
+data2 = pd.read_csv("../Datasets/EMG_Training_H.csv")
+data3 = pd.read_csv("../Datasets/EMG_Training_S.csv")
 
 training_data_pure1 = np.array(data["input"][0:99])
 training_data_overlapped1 = np.array(data["input"][99:])
@@ -159,7 +159,7 @@ clf.fit(X_training, y_training)
 
 ######## Validation on exact windows #########
 
-testing_data = pd.read_csv("../EMG_training_E_Day2.csv")
+testing_data = pd.read_csv("../Datasets/EMG_training_E_Day2.csv")
 testing_array_strings = np.array(testing_data["input"])
 
 testing_array = []
